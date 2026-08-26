@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Práctica 1 - TypeScript: tipos, arrays y callbacks",
+  "description": "Práctica 1 - TypeScript: tipos, arrays, callbacks, interfaces, clases y clases abstractas",
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
