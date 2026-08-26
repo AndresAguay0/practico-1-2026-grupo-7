@@ -12,6 +12,7 @@
 // -----------------------------------------------------------------------------
 // EJERCICIO 10 - interface Materia
 // -----------------------------------------------------------------------------
+//TODO cambiar a type
 export interface Materia {
     codigo: number;
     nombre: string;

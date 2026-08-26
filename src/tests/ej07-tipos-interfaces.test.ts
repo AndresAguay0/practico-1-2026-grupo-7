@@ -4,7 +4,7 @@ import {
     crearAlumnoType,
     type AlumnoInterface,
     type AlumnoType,
-} from "./ej07-tipos-interfaces.js";
+} from "../parte 2/ej07-tipos-interfaces.js";
 
 describe("Ejercicio 7 - crearAlumnoInterface", () => {
     it("construye el objeto con los datos recibidos", () => {

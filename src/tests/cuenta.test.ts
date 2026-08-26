@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Cuenta } from "./cuenta.js";
+import { Cuenta } from "../parte 2/cuenta.js";
 
 describe("Ejercicio 11 - Cuenta", () => {
     it("se crea con el saldo inicial indicado", () => {

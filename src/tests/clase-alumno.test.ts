@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Alumno, type Materia } from "./clase-alumno.js";
+import { Alumno, type Materia } from "../parte 2/clase-alumno.js";
 
 describe("Ejercicio 8 - Alumno básico", () => {
     it("asigna los atributos recibidos en el constructor", () => {

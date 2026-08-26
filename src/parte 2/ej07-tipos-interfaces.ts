@@ -13,6 +13,8 @@
 // -----------------------------------------------------------------------------
 // Versión con `interface`
 // -----------------------------------------------------------------------------
+//TODO rever la interface no me gusta para esto.
+
 export interface AlumnoInterface {
     legajo: number;
     nombre: string;

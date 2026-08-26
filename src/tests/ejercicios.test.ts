@@ -13,8 +13,8 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { alumnos, type Alumno } from "./db.js";
-import * as ej from "./ejercicios.js";
+import { alumnos, type Alumno } from "../models/db.js";
+import * as ej from "../parte 1/ejercicios.js";
 
 // -----------------------------------------------------------------------------
 // Alumnos de prueba chicos y controlados, para los casos donde conviene

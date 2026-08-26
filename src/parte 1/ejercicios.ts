@@ -15,7 +15,7 @@
  * La base contiene 1000 alumnos.
  */
 
-import { alumnos, type Alumno } from "./db.js";
+import { alumnos, type Alumno } from "../models/db.js";
 
 // -----------------------------------------------------------------------------
 // EJERCICIO 1 - Obtener nombres
