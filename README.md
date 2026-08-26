@@ -1,9 +1,10 @@
 # Práctica 1 - TypeScript
 
-Dos partes, mismo repo:
+Tres partes, mismo repo:
 
 - **Parte 1** — tipos, arrays y callbacks (20 ejercicios).
 - **Parte 2** — types/interfaces, clases, encapsulamiento y clases abstractas (ejercicios 7 a 13).
+- **Parte 3** — herencia y polimorfismo (ejercicios 14 a 20).
 
 ## Instalación
 
@@ -83,3 +84,36 @@ Reglas adicionales:
   `false` ni ignorar el llamado silenciosamente.
 - `Figura` y `Empleado` son clases abstractas: no se instancian directamente,
   solo sus subclases.
+
+## Parte 3 — herencia y polimorfismo
+
+| Ejercicio | Archivo | Tema |
+|---|---|---|
+| 14 | `src/ej14-vehiculos.ts` | `Vehiculo` + `Auto`/`Moto`/`Camion`, override de `acelerar()` |
+| 15 | `src/ej15-animales.ts` | `Animal` abstracta + 4 subclases, función polimórfica `hacerSonidos()` |
+| 16 | `src/ej16-sueldos.ts` | `Empleado` abstracta + 3 subclases, `calcularSueldos()` con `reduce` |
+| 17 | `src/ej17-pagos.ts` | `interface MetodoPago` + 4 implementaciones, `procesarPago()` |
+| 18 | `src/ej18-notificaciones.ts` | `Notificacion` abstracta + 3 subclases, `enviarNotificaciones()` |
+| 19 | `src/ej19-personajes.ts` | `Personaje` abstracta + `Guerrero`/`Mago`/`Arquero`, batalla polimórfica |
+| 20 | `src/ej20-universidad.ts` | Integrador: `Persona` → `Alumno`/`Docente`, relación con `Materia` |
+
+Varios ejercicios de esta parte tienen métodos que devuelven `void` y su
+efecto observable es un `console.log`. Los tests espían la consola
+(`vi.spyOn(console, "log")`) para verificar qué se logueó, en vez de
+exigirte un texto exacto — alcanza con que el mensaje mencione lo que se
+indica en el comentario `// TODO` de cada método (por ejemplo, que el de
+`Auto.acelerar()` contenga la palabra "auto").
+
+El Ejercicio 20 es el más grande (integrador) y junta todo lo anterior:
+herencia (`Persona` → `Alumno`/`Docente`), una clase que no hereda de nada
+(`Materia`) y una relación de ida y vuelta entre ambas — `alumno.inscribirse(materia)`
+debe quedar reflejado tanto en el alumno como en la materia. Los
+comentarios `// TODO` de `src/ej20-universidad.ts` explican esa relación
+con más detalle.
+
+Reglas adicionales:
+- Los métodos `getMaterias()`, `getMateriasAsignadas()`, `getAlumnosInscriptos()`
+  y `getDocentesAsignados()` deben devolver copias, no la referencia interna.
+- `inscribirAlumno`, `asignarDocente`, `inscribirse` y `asignarMateria` no
+  deben duplicar entradas si se llaman dos veces con el mismo alumno/materia
+  (comparar por `legajo`/`codigo`).
