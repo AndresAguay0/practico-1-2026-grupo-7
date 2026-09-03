@@ -201,8 +201,7 @@ export function transformar<T, R>(
     elementos: T[],
     callback: (elemento: T) => R
 ): R[] {
-    // TODO
-    throw new Error("Implementar");
+    return elementos.map(callback);
 }
 
 // -----------------------------------------------------------------------------
@@ -219,7 +218,7 @@ export function filtrar<T>(
     callback: (elemento: T) => boolean
 ): T[] {
     // TODO
-    throw new Error("Implementar");
+    return elementos.filter(callback);
 }
 
 // -----------------------------------------------------------------------------
