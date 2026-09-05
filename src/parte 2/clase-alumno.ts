@@ -39,7 +39,12 @@ export class Alumno {
         email: string
     ) {
         // TODO (Ejercicio 8): asignar los atributos recibidos.
-        throw new Error("Implementar");
+        this.legajo = legajo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.email = email;
+        this.setEdad(edad);
     }
 
     // -------------------------------------------------------------------
@@ -48,12 +53,12 @@ export class Alumno {
 
     getNombreCompleto(): string {
         // TODO
-        throw new Error("Implementar");
+        return `${this.nombre} ${this.apellido}`;
     }
 
     esMayorDeEdad(): boolean {
         // TODO
-        throw new Error("Implementar");
+        return this.edad >= 18;
     }
 
     // -------------------------------------------------------------------
@@ -62,14 +67,22 @@ export class Alumno {
 
     getEdad(): number {
         // TODO
-        throw new Error("Implementar");
+        return this.edad;
     }
 
     setEdad(edad: number): void {
         // TODO: debe impedir edades inválidas.
         // edad < 0   -> throw new Error(...)
         // edad > 120 -> throw new Error(...)
-        throw new Error("Implementar");
+        if (edad < 0) {
+            throw new Error("La edad debe ser un numero positivo");
+        }
+
+        if (edad > 120) {
+            throw new Error("La edad debe ser un numero menor o igual a 120");
+        }
+
+        this.edad = edad;
     }
 
     // -------------------------------------------------------------------
